@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f0f2; /* Updated background color */
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #3a5d78; /* Updated heading color */
+        }
+        .result-container {
+            background-color: #ffffff; /* Updated result container background */
+            border-radius: 15px; /* Updated border radius */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Updated shadow */
+            display: inline-block;
+            padding: 25px; /* Updated padding */
+        }
+        img {
+            border-radius: 15px; /* Updated border radius */
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Updated shadow */
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff; /* Updated link background */
+            padding: 12px 24px; /* Updated padding */
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Transition effect */
+        }
+        a:hover {
+            background-color: #0056b3; /* Updated hover color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Classification Result: {{ label }}</h1>
+    <div class="result-container">
+        <img src="{{ url_for('uploaded_file', filename=image_url) }}" alt="Uploaded Image">
+    </div>
+    <br>
+    <a href="/">Classify Another Image</a>
+</body>
+</html>

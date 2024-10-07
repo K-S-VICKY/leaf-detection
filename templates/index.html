@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classifier</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f0f2; /* Updated background color */
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #3a5d78; /* Updated heading color */
+        }
+        form {
+            background-color: #ffffff; /* Updated form background */
+            border-radius: 15px; /* Updated border radius */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Updated shadow */
+            display: inline-block;
+            padding: 25px; /* Updated padding */
+        }
+        input[type="file"] {
+            padding: 12px; /* Updated padding */
+            margin-bottom: 20px;
+            border: 2px solid #2980b9; /* Added border */
+            border-radius: 5px; /* Added border radius */
+            transition: border-color 0.3s; /* Transition effect */
+        }
+        input[type="file"]:hover {
+            border-color: #3498db; /* Hover effect */
+        }
+        button {
+            background-color: #007bff; /* Updated button color */
+            color: white;
+            padding: 12px 24px; /* Updated padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Transition effect */
+        }
+        button:hover {
+            background-color: #0056b3; /* Updated hover color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Disease Classifier</h1>
+    <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">Classify Image</button>
+    </form>
+</body>
+</html>
