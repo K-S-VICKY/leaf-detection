@@ -5,7 +5,6 @@ import numpy as np
 from skimage.feature import hog
 from skimage.io import imread
 import joblib
-
 # Initialize the Flask app
 app = Flask(__name__)
 
